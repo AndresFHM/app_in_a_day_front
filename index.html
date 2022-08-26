@@ -1,14 +1,81 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/643dd9b93c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles.css">
     <title>Lazy Recipes</title>
 </head>
+
 <body>
-    
+    <div class="navbar">
+        <i class="fa-solid fa-gear"></i>
+        <h1>Lazy Recipes</h1>
+        <i class="fa-solid fa-user"></i>
+    </div>
+    <div class="main">
+        <div class="btn-wrapper">
+            <button class="g-l-btn" onclick="GL()">Grocery List</button>
+            <button class="p-f-btn" onclick="PF()">Pantry/Fridge</button>
+            <button class="r-btn" onclick="R()">Recipes</button>
+        </div>
+        <div class="content-wrapper">
+            <div class="grocery-list" hidden="true">
+                <ul class="list">
+                </ul>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="pantry-fridge">
+                    <input type="text" placeholder="enter your ingredients">
+                    <button>Submit</button>           
+            </div>
+            <div class="recipes" hidden="true">
+                R
+            </div>
+        </div>
+    </div>
 </body>
+<script>
+
+const groceryList = document.querySelector('.grocery-list')
+const pantryFridge = document.querySelector('.pantry-fridge')
+const recipes = document.querySelector('.recipes')
+
+function GL() {
+    groceryList.hidden = false
+    pantryFridge.hidden = true
+    recipes.hidden = true
+}
+
+function PF() {
+    groceryList.hidden = true
+    recipes.hidden = true
+    pantryFridge.hidden = false
+}
+
+function R() {
+    groceryList.hidden = true
+    pantryFridge.hidden = true
+    recipes.hidden = false
+}
+
+const list = document.querySelector('.list')
+const addItem = document.querySelector('.fa-plus')
+
+let listItem = document.createElement('li')
+
+function addListItem() {
+    let item = prompt()
+    listItem.innerHTML = `${item} <i class="fa-solid fa-minus"></i> <i class="fa-solid fa-check"></i>`
+    list.append(listItem)
+}
+
+addItem.addEventListener('click', addListItem)
+
+</script>
 </html>
 

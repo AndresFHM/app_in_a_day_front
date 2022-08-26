@@ -1,0 +1,99 @@
+body{
+    margin: 0px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    padding: 0px 60px;
+    border-bottom: 1px black solid;
+}
+.navbar h1{
+    font-size: 300%;
+}
+.navbar i{
+    font-size: 300%;
+}
+
+.main .btn-wrapper{
+    margin: 0px 20%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    border-left: 1px black solid;
+    border-right: 1px black solid;
+}
+.main button{
+    width: 100%;
+    height: 6.7vh;
+    font-size: 150%;
+    border: none;
+    border-bottom: 1px solid black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.main button:hover{
+    background-color: aliceblue;
+}
+.main .p-f-btn{
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+}
+
+.main .content-wrapper{
+    margin: 0px 20%;
+    height: 83.2vh;
+    display: grid;
+    border-left: 1px black solid;
+    border-right: 1px black solid;
+}
+
+
+.main .content-wrapper .grocery-list{
+    width: 100%;
+    height: 83.2vh;
+}
+.main .content-wrapper .grocery-list ul{
+    margin-bottom: 0px;
+}
+.main .content-wrapper .grocery-list li{
+    padding: 5px 0px;
+    font-size: 150%;
+}
+.main .content-wrapper .grocery-list .fa-plus{
+    padding-top: 7px;
+    padding-left: 2.2%;
+}
+.main .content-wrapper .grocery-list .fa-minus{
+    font-size: 75%;
+}
+.main .content-wrapper .grocery-list .fa-check{
+    font-size: 75%;
+}
+
+.main .content-wrapper .pantry-fridge{
+    width: 100%;
+    height: 83.2vh;
+}
+.main .content-wrapper .pantry-fridge input{
+    width: 99%;
+    height: 30px;
+    border: none;
+    text-align: center;
+}
+.main .content-wrapper .pantry-fridge input:focus{
+    outline: none;
+}
+.main .content-wrapper .pantry-fridge button{
+    height: 40px;
+    border: 1px solid black;
+}
+
+
+.main .content-wrapper .recipes{
+    width: 100%;
+    height: 83.2vh;
+}
+
